@@ -1,0 +1,22 @@
+{
+  "name": "starter",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "keywords": [],
+  "author": "Tun Lin Zaw",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.9.3",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "core-js": "^3.31.1",
+    "fractional": "^1.0.0",
+    "parcel": "^2.9.3",
+    "regenerator-runtime": "^0.13.11"
+  }
+}
