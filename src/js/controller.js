@@ -5,7 +5,7 @@ import * as model from './model.js';
 import recipeView from './views/recipeView.js';
 import searchView from './views/searchView.js';
 import resultsView from './views/resultsView.js';
-import PaginationView from './views/PaginationView.js';
+import PaginationView from './views/paginationView.js';
 import bookmarkView from './views/bookmarkView.js';
 import addRecipeView from './views/addRecipeView.js';
 import { MODAL_CLOSE_SEC } from './config.js';
@@ -89,12 +89,11 @@ const controlAddRecipe = async function (newRecipe) {
     // Render bookmark view
     bookmarkView.render(model.state.bookmarks);
     // Change ID in URl
-    window.history.pushState(null,'',`#${model.state.recipe.id}`)
+    window.history.pushState(null, '', `#${model.state.recipe.id}`);
     // Close form window
-    setTimeout(function(){
+    setTimeout(function () {
       addRecipeView.toggleWindow();
-    },MODAL_CLOSE_SEC * 1000)
-    
+    }, MODAL_CLOSE_SEC * 1000);
   } catch (err) {
     console.error('###', err);
     addRecipeView.renderError(err.message);
